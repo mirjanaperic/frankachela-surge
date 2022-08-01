@@ -780,7 +780,6 @@ td {
 
 .form__inner {
   justify-content: space-between;
-  align-items: flex-end;
   display: flex;
 }
 
@@ -843,8 +842,8 @@ td {
   border: 0;
   border-bottom: 1px solid #000;
   border-radius: 0;
-  padding-bottom: 50px;
-  font-size: clamp(.75rem, 1.38vw, 1.25rem);
+  padding-bottom: 55px;
+  font-size: clamp(12px, 1.25vw, 20px);
 }
 
 @media only screen and (max-width: 1199px) {
@@ -1170,6 +1169,7 @@ input:invalid, textarea:invalid {
   font-size: clamp(14px, 1.7vw, 22px);
   font-weight: 300;
   display: block;
+  position: relative;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1187,6 +1187,20 @@ input:invalid, textarea:invalid {
   .footer__text:last-child {
     margin-bottom: 0;
   }
+}
+
+.footer__text:before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer__text:hover:before {
+  display: block;
 }
 
 .footer__text--logo {

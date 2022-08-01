@@ -115,7 +115,6 @@
 .form__inner {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
     @media only screen and (max-width: 1199px) {
         flex-wrap: wrap;
     }
@@ -165,8 +164,8 @@
     border-left: 0;
     border-right: 0;
     border-bottom: 1px solid $main-color;
-    padding-bottom: 50px;
-    font-size: clamp(0.75rem, 1.38vw, 1.25rem);
+    padding-bottom: 55px;
+    font-size: clamp(12px, 1.25vw, 20px);
     resize: none;
     border-radius: 0;
 	-webkit-border-radius: 0;

@@ -560,7 +560,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const form = {
     init: function() {
-        let url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf7PzkdVaHyDn7EcZ8XQFaxon87KG22re5Gxsd2FtP7O3e7Rw/formResponse";
+        let url = "https://docs.google.com/forms/u/1/d/e/1FAIpQLSdVfF2dS9gz52op83jJ3FqG_P5jt1_R8T6SRHLAfufDZJ2MRg/formResponse";
         let form1 = document.querySelector("#form");
         form1.addEventListener("submit", (e)=>{
             e.preventDefault();
@@ -580,9 +580,9 @@ const form = {
         });
         function getInputData() {
             let dataToPost = new FormData();
-            dataToPost.append("entry.442889035", document.querySelector("#name").value);
+            dataToPost.append("entry.1597614004", document.querySelector("#name").value);
             dataToPost.append("emailAddress", document.querySelector("#email").value);
-            dataToPost.append("entry.1431261949", document.querySelector("#message").value);
+            dataToPost.append("entry.1911179559", document.querySelector("#message").value);
             return dataToPost;
         }
     }
