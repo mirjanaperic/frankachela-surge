@@ -19,7 +19,10 @@
 }
 
 .contact__text-inner {
-    @media only screen and (max-width: 1199px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+       padding: 0 120px;
+    }
+    @media only screen and (max-width: 991px) {
         padding: 0 35px;
     }
 }
@@ -82,6 +85,9 @@
         flex: 0 0 100%;
         min-height: 40vh;
     }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        min-height: 50vh;
+     }
 }
 
 .contact__img {
@@ -95,9 +101,13 @@
     @media only screen and (max-width: 1199px) {
         display: block;
         margin-bottom: 48px;
-        max-height: 445px;
+        // max-height: 445px;
         left: 50%;
         transform: translate(-50%, 0);
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+       bottom: 75px;
+       margin-bottom: 0;
     }
     @media only screen and (max-width: 768px) {
         max-height: 300px;
@@ -109,6 +119,9 @@
     @media only screen and (max-width: 1199px) {
         background-color: $card-color-1;
         padding: 90px 60px 80px;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        padding: 90px 120px 80px;
     }
 }
 
@@ -135,6 +148,9 @@
     margin-bottom: 25px;
     @media only screen and (max-width: 1199px) {
         margin-bottom: 15px;
+    }
+    @media only screen and (min-width: 992px) and (max-width: 1024px) {
+        font-size: 30px;
     }
 }
 
@@ -170,6 +186,8 @@
     border-radius: 0;
 	-webkit-border-radius: 0;
     background-color: $card-color-1;
+    font-family: $font-default-light;
+    line-height: 1.2;
     @media only screen and (max-width: 1199px) {
         margin-bottom: 25px;
         padding-bottom: 10px;
@@ -221,6 +239,9 @@
             width: 100%;
             opacity: 1;
         }
+    }
+    @media only screen and (min-width: 992px) and (max-width: 1024px) {
+        font-size: 48px;
     }
 }
 
