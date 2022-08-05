@@ -1,5 +1,3 @@
-import clickAndHold from 'click-and-hold';
-
 const marquee = {
     init: function () {
         const mq = window.matchMedia("(max-width: 768px)");
@@ -13,13 +11,6 @@ const marquee = {
                 images.classList.remove('paused');
             });
         }
-        this.lock();
-    },
-    lock: function() {
-        window.addEventListener("orientationchange", function(){
-            console.log(screen.orientation.type); // e.g. portrait
-            screen.orientation.lock('portrait');
-        });
     }
 };
 

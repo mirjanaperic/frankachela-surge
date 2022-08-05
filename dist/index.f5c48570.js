@@ -658,8 +658,6 @@ exports.default = backToTop;
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6FLQD":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _clickAndHold = require("click-and-hold");
-var _clickAndHoldDefault = parcelHelpers.interopDefault(_clickAndHold);
 const marquee = {
     init: function() {
         const mq = window.matchMedia("(max-width: 768px)");
@@ -672,54 +670,9 @@ const marquee = {
                 images.classList.remove("paused");
             });
         }
-        this.lock();
-    },
-    lock: function() {
-        window.addEventListener("orientationchange", function() {
-            console.log(screen.orientation.type); // e.g. portrait
-            screen.orientation.lock("portrait");
-        });
     }
 };
 exports.default = marquee;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","click-and-hold":"bS5ph"}],"bS5ph":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function handleInitialPress(element, handler, interval) {
-    element.initialPressHandler = function initialPressHandler() {
-        element.clickAndHoldInterval = setInterval(handler, interval);
-    };
-    return element.initialPressHandler;
-}
-function handlePressRelease(element) {
-    element.pressReleaseHandler = function pressReleaseHandler() {
-        clearInterval(element.clickAndHoldInterval);
-    };
-    return element.pressReleaseHandler;
-}
-function register(element, handler, interval) {
-    element.clickAndHoldInterval = null;
-    element.addEventListener("mousedown", handleInitialPress(element, handler, interval), false);
-    element.addEventListener("mouseup", handlePressRelease(element), false);
-    element.addEventListener("mouseleave", handlePressRelease(element), false);
-    element.addEventListener("touchstart", handleInitialPress(element, handler, interval), false);
-    element.addEventListener("touchend", handlePressRelease(element), false);
-    element.addEventListener("touchcancel", handlePressRelease(element), false);
-}
-function unregister(element) {
-    element.removeEventListener("mousedown", element.initialPressHandler, false);
-    element.removeEventListener("mouseup", element.pressReleaseHandler, false);
-    element.removeEventListener("mouseleave", element.pressReleaseHandler, false);
-    element.addEventListener("touchstart", element.initialPressHandler, false);
-    element.addEventListener("touchend", element.pressReleaseHandler, false);
-    element.addEventListener("touchcancel", element.pressReleaseHandler, false);
-    clearInterval(element.clickAndHoldInterval);
-}
-exports.default = {
-    register,
-    unregister
-};
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"b8xXb":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
