@@ -63,7 +63,13 @@
     animation: chyron 17s infinite linear;
     width: 10000px;
     min-height: 250px;
-    &:hover {
+
+    @media only screen and (min-width: 1200px) {
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+    &.paused {
         animation-play-state: paused;
     }
 }

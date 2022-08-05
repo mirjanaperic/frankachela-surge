@@ -4,9 +4,6 @@ form.init();
 import banner from './_project/banner';
 banner.init();
 
-import imageAnimations from './_project/image-animations';
-imageAnimations.init();
-
 import backToTop from './_project/backToTop';
 backToTop.init();
 
