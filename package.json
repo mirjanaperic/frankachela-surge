@@ -1,7 +1,6 @@
 {
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.2",
-    "click-and-hold": "^2.0.0",
     "parcel": "^2.6.2"
   },
   "dependencies": {

@@ -7,7 +7,7 @@ const marquee = {
             images.addEventListener('touchstart', function () {
                 images.classList.add('paused');
             });
-            images.addEventListener('touchend', function (e) {
+            images.addEventListener('touchend', function () {
                 images.classList.remove('paused');
             });
         }
